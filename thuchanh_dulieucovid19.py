@@ -16,4 +16,8 @@ plt.xlabel('số ca mắc mới')
 plt.ylabel('số lượng quốc gia') 
 plt.show()
 
-print('tổng số ca nhiễm và số ca của các châu lục')
+print('tổng số ca nhiễm và số ca chết của các châu lục')
+cleaned_data.groupby('continent')['cases','deaths'].sum()   
+
+print('top 5 quốc gia có ca nhiễm mới cao nhất')
+cleaned_data.sort_values('cases', ascending=False).head()
